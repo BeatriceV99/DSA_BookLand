@@ -171,13 +171,13 @@ h2 .heading {
     margin-bottom: 20px;
 }
 
-.book {
+.book_category {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
 }
 
-.book .box-container {
+.book_category .box-container {
     display: flex;
     flex-wrap: wrap;
     gap: 1.5rem;
@@ -198,7 +198,7 @@ h2 .heading {
     margin: 20px;
 }
 
-.book .box-container .box img {
+.book_category .box-container .box img {
     height: 200px;
     width: 200px;
     object-fit: cover;
@@ -285,11 +285,13 @@ h2 .heading {
 
 .contacts {
     display: flex;
+    justify-content: space-around;
     background-color: white;
+    background-size: cover;
     padding: 1rem;
     border-radius: 5px;
     box-shadow: 0 0 10px rgba(0, 0 , 0, 0.1);
-    margin: 1rem 0;
+    margin: 20px;
 }
 
 .contacts p {
@@ -302,9 +304,9 @@ h2 .heading {
     background-size: cover;
     background-position: center;
     border-radius: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     padding: 5%;
     color: #fff1c3;
-    max-width: 1200px;
 }
 
 .banner .cta h3 {
@@ -355,4 +357,97 @@ h2 .heading {
 	padding-bottom: 15px;
 	color: #808080;
 	font-size: 16px;
+}
+
+/* Stili per la barra di ricerca */
+#search-bar {
+    text-align: center;
+    margin: 1rem 0;
+}
+
+#search-bar input {
+    width: 80%;
+    padding: 0.5rem;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+}
+
+/* Catalog */
+#catalog {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.book {
+    background-color: white;
+    margin: 1rem;
+    padding: 1rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    max-width: 200px;
+}
+
+.book img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.book .btn {
+    display: inline-block;
+    margin-top: 1rem;
+    padding: 0.5rem 1rem;
+    background-color: #333;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.book .btn:hover {
+    background-color: #555;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.popup-content {
+    background-color: white;
+    padding: 2rem;
+    border-radius: 10px;
+    max-width: 900px;
+    width: 100%;
+    text-align: center;
+    position: relative;
+}
+
+.popup-content .close {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 1.5rem;
+}
+
+.popup-content .book_popup {
+    display: flex;
+    align-items: center;
+}
+
+.popup-content .book_popup img {
+    width: 50%;
+    height: 50%;
+    margin: 20px;
 }

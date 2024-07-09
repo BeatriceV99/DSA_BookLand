@@ -27,60 +27,31 @@
 
         <!-- Elenco libri -->
         <main>
-            <div class="sections">
-                <section>
-                    <h2>Catalogo dei Libri</h2>
+            <section id="search-bar">
+                <input type="text" id="searchInput" placeholder="Cerca per titolo, autore o catogoria..." onkeyup="filterBooks()">
+            </section>
 
-                    <!-- Ricerca libri -->
-                    <input type="text" id="searchInput" placeholder="Cerca per titolo, autore, genere...">
-                    <ul id="bookList"></ul>
-                </section>
-            </div>            
+            <section id="catalog">
+
+            </section>
         </main>
 
-        <!-- Script dell'elenco dei libri -->
-        <script>
-            fetch('book.json')
-                .then(response => {
-                    if (!response.ok) {
-                        throw new Error('Network response war not ok ' + response.statusText);
-                    }
-                    return response.json();
-                })
-                .then(data => {
-                    const bookList = document.getElementById('bookList');
-                    const searchInput = document.getElementById('searchInput');
-        
-                    function displayBooks(books) {
-                        bookList.innerHTML = '';
-                        books.forEach(book => {
-                            const li = document.createElement('ul');
-                            li.innerHTML = `
-                                <img src="${book.copertina}" alt="Copertina di ${book.titolo}" width="80">
-                                <h3>${book.titolo}</h3>
-                                <p>Autore: ${book.autore}</p>
-                                <p>Genere: ${book.genere}</p>
-                                <p>Anno: ${book.anno}</p>
-                                <p>Disponibilità: ${book.disponibilità ? 'Disponibile' : 'Non Disponibile'}</p>
-                                <p>___________________________________</p>
-                            `;
-                            bookList.appendChild(li);
-                        });
-                    }
-        
-                    displayBooks(data);
-        
-                    searchInput.addEventListener('input', function() {
-                        const searchTerm = this.value.toLowerCase();
-                        const filteredBooks = data.filter(book =>
-                            book.titolo.toLowerCase().includes(searchTerm) ||
-                            book.autore.toLowerCase().includes(searchTerm) ||
-                            book.genere.toLowerCase().includes(searchTerm)
-                        );
-                        displayBooks(filteredBooks);
-                    });
-                })
-                .catch(error => console.error('Errore nel caricamento dei dati: ', error));
-        </script>
+        <!-- Footer -->
+        <div class="sections">
+            <div class="footer">
+                <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i>
+                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                <br>
+                <p>Copyright 2023</p>
+            </div>
+        </div>
+
+        <!-- I popup saranno generati dinamicamente qui -->
+         <div id="popups">
+         </div>
+
+        <script src="json/book.js"></script>
+
     </body>
 </html>
