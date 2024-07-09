@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BookLand</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+        <!-- Navbar -->
+        <header>
+            <img class="logo" src="media/logo.png" alt="logo" width="40" height="40"> 
+            <h1 class="title">BookLand</h1>
+            <div class="menu">
+                <nav class="navbar">
+                    <ul>
+                        <a href="index.html">Home</a>
+                        <a href="catalogue.html">Catalogue</a>
+                        <a href="#">Contacts</a>
+                        <a href="#events">Events</a>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Elenco libri -->
+        <main>
+            <div class="sections">
+                <section>
+                    <h2>Catalogo dei Libri</h2>
+
+                    <!-- Ricerca libri -->
+                    <input type="text" id="searchInput" placeholder="Cerca per titolo, autore, genere...">
+                    <ul id="bookList"></ul>
+                </section>
+            </div>            
+        </main>
+
+        <!-- Script dell'elenco dei libri -->
+        <script>
+            fetch('book.json')
+                .then(response => {
+                    if (!response.ok) {
+                        throw new Error('Network response war not ok ' + response.statusText);
+                    }
+                    return response.json();
+                })
+                .then(data => {
+                    const bookList = document.getElementById('bookList');
+                    const searchInput = document.getElementById('searchInput');
+        
+                    function displayBooks(books) {
+                        bookList.innerHTML = '';
+                        books.forEach(book => {
+                            const li = document.createElement('ul');
+                            li.innerHTML = `
+                                <img src="${book.copertina}" alt="Copertina di ${book.titolo}" width="80">
+                                <h3>${book.titolo}</h3>
+                                <p>Autore: ${book.autore}</p>
+                                <p>Genere: ${book.genere}</p>
+                                <p>Anno: ${book.anno}</p>
+                                <p>Disponibilità: ${book.disponibilità ? 'Disponibile' : 'Non Disponibile'}</p>
+                                <p>___________________________________</p>
+                            `;
+                            bookList.appendChild(li);
+                        });
+                    }
+        
+                    displayBooks(data);
+        
+                    searchInput.addEventListener('input', function() {
+                        const searchTerm = this.value.toLowerCase();
+                        const filteredBooks = data.filter(book =>
+                            book.titolo.toLowerCase().includes(searchTerm) ||
+                            book.autore.toLowerCase().includes(searchTerm) ||
+                            book.genere.toLowerCase().includes(searchTerm)
+                        );
+                        displayBooks(filteredBooks);
+                    });
+                })
+                .catch(error => console.error('Errore nel caricamento dei dati: ', error));
+        </script>
+    </body>
+</html>

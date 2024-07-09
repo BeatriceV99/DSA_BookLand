@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>BookLand</title>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+
+    <body>
+
+        <!-- Navbar -->
+        <header>
+            <img class="logo" src="media/logo.png" alt="logo" width="40" height="40"> 
+            <h1 class="title">BookLand</h1>
+            <div class="menu">
+                <nav class="navbar">
+                    <ul>
+                        <a href="index.html">Home</a>
+                        <a href="catalogue.html">Catalogue</a>
+                        <a href="#">Contacts</a>
+                        <a href="#events">Events</a>
+                    </ul>
+                </nav>
+            </div>
+        </header>
+
+        <!-- Prima riga introduttiva -->
+        <section class="container" id="container">
+            <div class="info-box left">
+                <h2>Scopri nuovi mondo con la tua immaginazione</h2>
+                <br>
+                <h4>Scopri le novità</h4>
+                <a href="catalogue.html" class="button">Scopri</a>
+            </div>
+            <div class="video-box">
+                <video controls loop>
+                    <source src="media/book.mp4" type="video/mp4">
+                </video>
+            </div>
+        </section>
+
+        <!-- Riga delle categorie -->
+        <div class="sections">
+            <h2 class="heading">Dai un'occhiata</h2>
+            <section class="book" id="book">
+                <div class="box-container">
+                    <div class="box">
+                        <h4 class="category">Bestseller</h4>
+                        <img src="media/bestseller.jpeg" alt="bestseller" width="50" height="50">
+                    </div>
+                    <div class="box">
+                        <h4 class="category">Più venduti</h4>
+                        <img src="media/most_seller.jpeg" alt="most_seller" width="50" height="50">
+                    </div>
+                    <div class="box">
+                        <h4 class="category">Shopper</h4>
+                        <img src="media/shopper.jpeg" alt="shopper" width="50" height="50">
+                    </div>
+                </div>
+            </section>            
+        </div>
+        
+        <!-- Eventi vari in programma -->
+        <div class="sections">
+            <div class="moon-line"></div>
+            
+            <section class="events" id="events">
+                <h2 class="heading-events">Eventi in arrivo</h2>
+                <section class="event_all" id="event_all">
+                    <div class="box-event">
+
+                        <div class="info-box-event left">
+                            <h4 class="title">Workshop di Scrittura Creativa</h4>
+                            <br>
+                            <h5>10 luglio 2024</h5><br>
+                            <h5><strong>Orario: </strong>16:00 - 18:00</h5>
+                            <br>
+                            <br>
+                            <button class="details" onclick="showPopup('detail1-popup')">Dettagli</button>
+                        </div>
+                        <div id="detail1-popup" class="popup">
+                            <div class="popup-content-event">
+                                <span class="close" onclick="hidePopup('detail1-popup')">&times;</span>
+                                <h2>Workshop di Scrittura Creativa</h2>
+                                <p>Un workshop interattivo in cui i partecipanti possono imparare tecniche di scrittura creativa, 
+                                    esplorare diversi generi letterari e ricevere feedback dai loro coetanei. Il workshop sarà 
+                                    condotto da un autore pubblicato che condividerà consigli pratici e ispirazione.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box-event left">
+                            <h4 class="title">Club del Libro Virtuale</h4>
+                            <br>
+                            <h5>20 luglio 2024</h5><br>
+                            <h5><strong>Orario: </strong>18:00 - 19:30</h5>
+                            <br>
+                            <br>
+                            <button class="details" onclick="showPopup('detail2-popup')">Dettagli</button>
+                        </div>
+                        <div id="detail2-popup" class="popup">
+                            <div class="popup-content-event">
+                                <span class="close" onclick="hidePopup('detail2-popup')">&times;</span>
+                                <h2>Workshop di Scrittura Creativa</h2>
+                                <p>Un incontro mensile per discutere di un libro scelto dai partecipanti. Questo mese, discuteremo 
+                                    "Il nome della rosa" di Umberto Eco. Il moderatore guiderà la discussione e ci sarà spazio per 
+                                    domande e riflessioni personali.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box-event left">
+                            <h4 class="title">Conferenza sull'Intelligenza Artificiale nella Letteratura</h4>
+                            <br>
+                            <h5>5 agosto 2024</h5><br>
+                            <h5><strong>Orario: </strong>16:00 - 18:00</h5>
+                            <br>
+                            <br>
+                            <button class="details" onclick="showPopup('detail3-popup')">Dettagli</button>
+                        </div>
+                        <div id="detail3-popup" class="popup">
+                            <div class="popup-content-event">
+                                <span class="close" onclick="hidePopup('detail3-popup')">&times;</span>
+                                <h2>Workshop di Scrittura Creativa</h2>
+                                <p>Una conferenza che esplora l'impatto dell'intelligenza artificiale nella creazione letteraria e 
+                                    nella lettura. Relatori esperti discuteranno di come l'IA può essere utilizzata per scrivere libri, 
+                                    analizzare testi e migliorare l'esperienza di lettura.</p>
+                            </div>
+                        </div>
+
+                        <div class="info-box-event left">
+                            <h4 class="title">Maratona di Lettura di Classici della Letteratura</h4>
+                            <br>
+                            <h5>15 agosto 2024</h5><br>
+                            <h5><strong>Orario: </strong>12:00 - 20:00</h5>
+                            <br>
+                            <br>
+                            <button class="details" onclick="showPopup('detail4-popup')">Dettagli</button>
+                        </div>
+                        <div id="detail4-popup" class="popup">
+                            <div class="popup-content-event">
+                                <span class="close" onclick="hidePopup('detail4-popup')">&times;</span>
+                                <h2>Workshop di Scrittura Creativa</h2>
+                                <p>Una giornata intera dedicata alla lettura di brani dai classici della letteratura mondiale. 
+                                    Partecipanti possono leggere i loro passaggi preferiti o semplicemente ascoltare. Saranno 
+                                    inclusi autori come Dante, Shakespeare, e Tolstoj.</p>
+                            </div>
+                        </div>
+
+                        <script src="json/script.js"></script>
+                    </div>
+                </section>
+            </section>
+
+            <div class="moon-line_2"></div>
+        </div>
+
+        <!-- Contatti -->
+         <div class="sections">
+            <h2>Per maggiori informazioni contattare:</h2><br>
+            <section class="contacts">
+                <p>Beatrice Venzano <br> email: ...</p><br>
+                <p>Giulia Turri <br> email: ...</p><br>
+                <p>Ilaria Gollo <br> email: ...</p><br>
+            </section>
+         </div>
+
+        <!-- Banner extra per arrivare ai libri -->
+        <section class="banner">
+            <div class="cta">
+                <h3>Vivi nuove avventura, immergendori in mondi nuovi e fatastici</h3>
+                <p>Con noi potrai vagliare ogni tua nuova passione di lettura, dai classici con I Promessi Sposi, Romeo e Giulietta e molti altri;
+                fino a romanzi più modersi come L'attraversa specchi, Harry Potter e molti altri ancora</p>
+                <a href="catalogue.html" class="cta-btn">Esplora</a>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <div class="sections">
+            <div class="footer">
+                <a href="https://facebook.com/"><i class="fa-brands fa-facebook"></i></a>
+                <a href="https://instagram.com/"><i class="fa-brands fa-instagram"></i>
+                <a href="https://twitter.com/"><i class="fa-brands fa-twitter"></i></a>
+                <br>
+                <p>Copyright 2023</p>
+            </div>
+        </div>
+         
+    </body>
+</html>
