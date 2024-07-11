@@ -1,0 +1,414 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12/"
+     xml:base="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12/"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:xml="http://www.w3.org/XML/1998/namespace"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+     xmlns:untitled-ontology-12="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#">
+    <owl:Ontology rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Object Properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#haInPrestito -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#haInPrestito">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#utenti"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#libri"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#haIscrizione -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#haIscrizione">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#utenti"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#biblioteca"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#haPartecipato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#haPartecipato">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#utenti"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#eventi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#presentato -->
+
+    <owl:ObjectProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#presentato">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#libri"/>
+        <rdfs:range rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#eventi"/>
+    </owl:ObjectProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Data properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#annoPubblicazione -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#annoPubblicazione">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#libri"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#autore -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#autore">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#libri"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#data -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#data">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#eventi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#descrizione -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#descrizione">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#eventi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#email -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#email">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#contatti"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#genere -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#genere">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#libri"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#idLibro -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#idLibro">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#libri"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#idUtente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#idUtente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#utenti"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#nome -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#nome">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#biblioteca"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#nomeContatto -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#nomeContatto">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#contatti"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#nomeEvento -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#nomeEvento">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#eventi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#nomeUtente -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#nomeUtente">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#utenti"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#orario -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#orario">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#eventi"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#dateTime"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#sede -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#sede">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#biblioteca"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#sottogenere -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#sottogenere">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#libri"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#telefono -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#telefono">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#contatti"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#titolo -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#titolo">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#libri"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#trama -->
+
+    <owl:DatatypeProperty rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#trama">
+        <rdfs:domain rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#libri"/>
+        <rdfs:range rdf:resource="http://www.w3.org/2000/01/rdf-schema#Literal"/>
+    </owl:DatatypeProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#biblioteca -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#biblioteca"/>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#contatti -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#contatti">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#biblioteca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#eventi -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#eventi">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#biblioteca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#insegnanti -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#insegnanti">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#utenti"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#lettori_generici -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#lettori_generici">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#utenti"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#libri -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#libri">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#biblioteca"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#studenti -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#studenti">
+        <rdfs:subClassOf rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#utenti"/>
+    </owl:Class>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#utenti -->
+
+    <owl:Class rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#utenti"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Individuals
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#AR -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#AR">
+        <rdf:type rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#studenti"/>
+        <untitled-ontology-12:haInPrestito rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#2"/>
+        <untitled-ontology-12:haIscrizione rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#BL"/>
+        <untitled-ontology-12:idUtente rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">4509</untitled-ontology-12:idUtente>
+        <untitled-ontology-12:nomeUtente>Albi04</untitled-ontology-12:nomeUtente>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#BL -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#BL">
+        <rdf:type rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#biblioteca"/>
+        <untitled-ontology-12:nome>BookLand</untitled-ontology-12:nome>
+        <untitled-ontology-12:sede>Genova</untitled-ontology-12:sede>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#BV -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#BV">
+        <rdf:type rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#contatti"/>
+        <untitled-ontology-12:email>bea.v@gmail.com</untitled-ontology-12:email>
+        <untitled-ontology-12:nomeContatto>Beatrice Venzano</untitled-ontology-12:nomeContatto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#EV1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#EV1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#eventi"/>
+        <untitled-ontology-12:data>20 luglio 2024</untitled-ontology-12:data>
+        <untitled-ontology-12:descrizione>Un incontro mensile per discutere di un libro scelto dai partecipanti. Questo mese, discuteremo &quot;Il nome della rosa&quot; di Umberto Eco. Il moderatore guiderà la discussione e ci sarà spazio per domande e riflessioni personali.</untitled-ontology-12:descrizione>
+        <untitled-ontology-12:nomeEvento>Club del Libro virtuale</untitled-ontology-12:nomeEvento>
+        <untitled-ontology-12:orario>18:00 - 19:30</untitled-ontology-12:orario>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#GT -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#GT">
+        <rdf:type rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#contatti"/>
+        <untitled-ontology-12:email>giulia.t@gmail.com</untitled-ontology-12:email>
+        <untitled-ontology-12:nomeContatto>Giulia Turri</untitled-ontology-12:nomeContatto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#IG -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#IG">
+        <rdf:type rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#contatti"/>
+        <untitled-ontology-12:email>ila.g@gmail.com</untitled-ontology-12:email>
+        <untitled-ontology-12:nomeContatto>Ilaria Gollo</untitled-ontology-12:nomeContatto>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#1 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#1">
+        <rdf:type rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#libri"/>
+        <untitled-ontology-12:presentato rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#EV1"/>
+        <untitled-ontology-12:annoPubblicazione rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1949</untitled-ontology-12:annoPubblicazione>
+        <untitled-ontology-12:autore>George Orwell</untitled-ontology-12:autore>
+        <untitled-ontology-12:genere>romanzo</untitled-ontology-12:genere>
+        <untitled-ontology-12:idLibro rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1</untitled-ontology-12:idLibro>
+        <untitled-ontology-12:sottogenere>fantasy</untitled-ontology-12:sottogenere>
+        <untitled-ontology-12:titolo>1984</untitled-ontology-12:titolo>
+        <untitled-ontology-12:trama>1984 is a dystopian novel by English writer George Orwell, published on 8 June 1949. His last work, and fifth novel, focuses on the consequences of totalitarianism, mass surveillance, the repression of freedoms and the regimentation of people and behavior within society. Orwell, a libertarian socialist, modeled the authoritarian state of the novel on both Stalin’s Soviet Union and Hitler’s Nazi Germany. Even more generally, the novel analyzes the role of truth and facts within societies, and the cunning systems in which they can be manipulated.
+Orwell’s famous work, which popularized the term &quot;orwellian&quot; as an adjective, and many other notions in the novel, is a satire of the perversions and abuses of dictatorial regimes.</untitled-ontology-12:trama>
+    </owl:NamedIndividual>
+    
+
+
+    <!-- http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#2 -->
+
+    <owl:NamedIndividual rdf:about="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#2">
+        <rdf:type rdf:resource="http://www.semanticweb.org/_bea_/ontologies/2024/6/untitled-ontology-12#libri"/>
+        <untitled-ontology-12:annoPubblicazione rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">1925</untitled-ontology-12:annoPubblicazione>
+        <untitled-ontology-12:autore>Francis Scott Fitzgerald</untitled-ontology-12:autore>
+        <untitled-ontology-12:genere>tragedia</untitled-ontology-12:genere>
+        <untitled-ontology-12:idLibro rdf:datatype="http://www.w3.org/2001/XMLSchema#decimal">2</untitled-ontology-12:idLibro>
+        <untitled-ontology-12:titolo>Il grande Gatsby</untitled-ontology-12:titolo>
+        <untitled-ontology-12:trama>The Great Gatsby is a 1925 novel by American writer F. Scott Fitzgerald. Set in the Jazz Age on Long Island, near New York City, the novel depicts first-person narrator Nick Carraway&apos;s interactions with mysterious millionaire Jay Gatsby and Gatsby&apos;s obsession to reunite with his former lover, Daisy Buchanan.
+The novel was inspired by a youthful romance Fitzgerald had with socialite Ginevra King, and the riotous parties he attended on Long Island&apos;s North Shore in 1922. Following a move to the French Riviera, Fitzgerald completed a rough draft of the novel in 1924. He submitted it to editor Maxwell Perkins, who persuaded Fitzgerald to revise the work over the following winter. After making revisions, Fitzgerald was satisfied with the text, but remained ambivalent about the book&apos;s title and considered several alternatives. Painter Francis Cugat&apos;s dust jacket art, named Celestial Eyes, greatly impressed Fitzgerald, and he incorporated its imagery into the novel.</untitled-ontology-12:trama>
+    </owl:NamedIndividual>
+</rdf:RDF>
+
+
+
+<!-- Generated by the OWL API (version 4.5.26.2023-07-17T20:34:13Z) https://github.com/owlcs/owlapi -->
+
