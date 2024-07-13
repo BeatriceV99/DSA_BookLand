@@ -9,6 +9,7 @@
     </head>
 
     <body>
+
         <!-- Navbar -->
         <header>
             <img class="logo" src="media/logo.png" alt="logo" width="40" height="40"> 
@@ -24,20 +25,37 @@
             </div>
         </header>
 
-        <!-- Elenco libri -->
-        <main>
-            <section class="sections">
-                <h1>Catalogue of our available books</h1>
-            </section>
-            
-            <section id="search-bar">
-                <input type="text" id="searchInput" placeholder="Search by title, author or category..." onkeyup="filterBooks()">
-            </section>
+        <!-- Box dei Contatti -->
+        <div class="contact-container">
+            <div class="contact-box">
+                <img src="#" alt="Ilaria Gollo" class="contact-photo">
+                <div class="contact-info">
+                    <h2>Ilaria Gollo</h2>
+                    <br>
+                    <p><strong>Email:</strong> ila.g@gmail.com<br>
+                    <strong>Telefono:</strong> 123 4567890</p>
+                </div>
+            </div>
 
-            <section id="catalog">
+            <div class="contact-box">
+                <img src="media/contacts/GT.jpeg" alt="Giulia Turri" class="contact-photo">
+                <div class="contact-info">
+                    <h2>Giulia Turri</h2>
+                    <br>
+                    <p><strong>Email:</strong> giulia.t@gmail.com<br>
+                    <strong>Telefono:</strong> 456 7890123</p>
+                </div>
+            </div>
 
-            </section>
-        </main>
+            <div class="contact-box">
+                <img src="media/contacts/BV.jpg" alt="Beatrice Venzano" class="contact-photo">
+                <div class="contact-info">
+                    <h2>Beatrice Venzano</h2><br>
+                    <p><strong>Email:</strong> bea.v@gmail.com<br>
+                    <strong>Telefono:</strong> 789 0123456</p>
+                </div>
+            </div>
+        </div>
 
         <!-- Footer -->
         <div class="sections">
@@ -49,11 +67,6 @@
                 <p>&copy; Copyright 2024</p>
             </div>
         </div>
-
-        <!-- I popup saranno generati dinamicamente qui -->
-        <div id="popups"></div>
-
-        <script src="json/book.js"></script>
-
+        
     </body>
 </html>
