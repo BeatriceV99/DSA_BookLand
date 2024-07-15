@@ -24,15 +24,70 @@
                     </ul>
                 </nav>
             </div>
+            <button class="login-btn" onclick="openLoginPopup()">Login <i class="fas fa-sign-in-alt"></i></button>
         </header>
+
+        <!-- Popup per il login e la registrazione dell'utente -->
+        <div id="loginPopup" class="popup">
+            <div class="popup-content">
+                <span class="close" onclick="closePopup()">&times;</span>
+
+                <div id="loginForm">
+                    <h2>Login</h2>
+                    <br><br>
+                    <form>
+                        <label for="username">Username:</label><br>
+                        <input type="text" id="username" name="username" required>
+                        <br>
+                        <label for="password">Password:</label><br>
+                        <input type="password" id="password" name="password" required>
+                        <br>
+                        <br>
+                        <button type="submit">LOGIN</button>
+                    </form>
+                    <br>
+                    <p>Don't have an account? <a href="#" onclick="event.preventDefault(); showRegisterForm()">Register</a></p>
+                </div>
+
+                <div id="registerForm" style="display: none;">
+                    <h2>Register</h2>
+                    <br><br>
+                    <form>
+                        <label for="newUsername">Username:</label><br>
+                        <input type="text" id="newUsername" name="newUsername" required>
+                        <br>
+                        <label for="newEmail">Email:</label><br>
+                        <input type="email" id="newEmail" name="newEmail" required>
+                        <br>
+                        <label for="newPassword">Password:</label><br>
+                        <input type="password" id="newPassword" name="newPassword" required>
+                        <br>
+                        <label for="newConfirmPassword">Confirm password:</label><br>
+                        <input type="password" id="newConfirmPassword" name="newConfirmPassword" required>
+                        <br>
+                        <label for="userType">UserTyper: </label><br>
+                        <select id="userType" name="userType" required>
+                            <option value="student">Student</option>
+                            <option value="teacher">Teacher</option>
+                            <option value="genericReader">Generic Reader</option>
+                        </select>
+                        <br>
+                        <br>
+                        <button type="submit">REGISTER</button>
+                    </form>
+                    <br>
+                    <p>Already have an account? <a href="#" onclick="event.preventDefault(); showLoginForm()">Login</a></p>
+                </div>
+            </div>
+        </div>
 
         <!-- Prima riga introduttiva -->
         <section class="container" id="container">
             <div class="info-box left">
-                <h2>Scopri nuovi mondo con la tua immaginazione</h2>
+                <h2>Discover new worlds with your imagination</h2>
                 <br>
-                <h4>Scopri le novità</h4>
-                <a href="catalogue.html" class="button">Scopri</a>
+                <h5>See what's new</h5>
+                <a href="catalogue.html" class="button">Discover</a>
             </div>
             <div class="video-box">
                 <video autoplay loop muted>
@@ -43,7 +98,7 @@
 
         <!-- Riga delle categorie -->
         <div class="sections">
-            <h2 class="heading">Dai un'occhiata</h2>
+            <h2 class="heading">Look up:</h2>
             <section class="book_category" id="book_catogory">
                 <div class="box-container">
                     <div class="box">
@@ -51,7 +106,7 @@
                         <img src="media/bestseller.jpeg" alt="bestseller" width="50" height="50">
                     </div>
                     <div class="box">
-                        <h4 class="category">Più venduti</h4>
+                        <h4 class="category">Most Seller</h4>
                         <img src="media/most_seller.jpeg" alt="most_seller" width="50" height="50">
                     </div>
                     <div class="box">
@@ -67,87 +122,91 @@
             <div class="moon-line"></div>
             
             <section class="events" id="events">
-                <h2 class="heading-events">Eventi in arrivo</h2>
+                <h2 class="heading-events">Events coming</h2>
                 <section class="event_all" id="event_all">
                     <div class="box-event">
 
                         <div class="info-box-event left">
-                            <h4 class="title">Workshop di Scrittura Creativa</h4>
+                            <h4 class="title">Workshop of Creative Writing</h4>
                             <br>
-                            <h5>10 luglio 2024</h5><br>
-                            <h5><strong>Orario: </strong>16:00 - 18:00</h5>
+                            <h5>10 July 2024</h5><br>
+                            <h5><strong>Time: </strong>16:00 - 18:00</h5>
                             <br>
                             <br>
-                            <button class="details" onclick="showPopup('detail1-popup')">Dettagli</button>
+                            <button class="details" onclick="showPopup('detail1-popup')">Details</button>
                         </div>
                         <div id="detail1-popup" class="popup">
                             <div class="popup-content-event">
                                 <span class="close" onclick="hidePopup('detail1-popup')">&times;</span>
-                                <h2>Workshop di Scrittura Creativa</h2>
-                                <p>Un workshop interattivo in cui i partecipanti possono imparare tecniche di scrittura creativa, 
-                                    esplorare diversi generi letterari e ricevere feedback dai loro coetanei. Il workshop sarà 
-                                    condotto da un autore pubblicato che condividerà consigli pratici e ispirazione.</p>
+                                <h2>Workshop of Creative Writing</h2>
+                                <br>
+                                <br>
+                                <p>An interactive workshop where participants can learn creative writing techniques, 
+                                    explore different literary genres and receive feedback from their peers. The workshop 
+                                    will be led by a published author who will share practical advice and inspiration.</p>
                             </div>
                         </div>
 
                         <div class="info-box-event left">
-                            <h4 class="title">Club del Libro Virtuale</h4>
+                            <h4 class="title">Virtual book club</h4>
                             <br>
-                            <h5>20 luglio 2024</h5><br>
-                            <h5><strong>Orario: </strong>18:00 - 19:30</h5>
+                            <h5>20 July 2024</h5><br>
+                            <h5><strong>Time: </strong>18:00 - 19:30</h5>
                             <br>
                             <br>
-                            <button class="details" onclick="showPopup('detail2-popup')">Dettagli</button>
+                            <button class="details" onclick="showPopup('detail2-popup')">Details</button>
                         </div>
                         <div id="detail2-popup" class="popup">
                             <div class="popup-content-event">
                                 <span class="close" onclick="hidePopup('detail2-popup')">&times;</span>
-                                <h2>Workshop di Scrittura Creativa</h2>
-                                <p>Un incontro mensile per discutere di un libro scelto dai partecipanti. Questo mese, discuteremo 
-                                    "Il nome della rosa" di Umberto Eco. Il moderatore guiderà la discussione e ci sarà spazio per 
-                                    domande e riflessioni personali.</p>
+                                <h2>Virtual book club</h2>
+                                <br>
+                                <br>
+                                <p>A monthly meeting to discuss a book chosen by the participants. This month, 
+                                    we will discuss "1984" by George Orwell. The moderator will guide the discussion and 
+                                    there will be space for questions and personal reflections.</p>
                             </div>
                         </div>
 
                         <div class="info-box-event left">
-                            <h4 class="title">Conferenza sull'Intelligenza Artificiale nella Letteratura</h4>
+                            <h4 class="title">Conference on Artificial Intelligence in Literature</h4>
                             <br>
-                            <h5>5 agosto 2024</h5><br>
-                            <h5><strong>Orario: </strong>16:00 - 18:00</h5>
+                            <h5>5 August 2024</h5><br>
+                            <h5><strong>Time: </strong>16:00 - 18:00</h5>
                             <br>
                             <br>
-                            <button class="details" onclick="showPopup('detail3-popup')">Dettagli</button>
+                            <button class="details" onclick="showPopup('detail3-popup')">Details</button>
                         </div>
                         <div id="detail3-popup" class="popup">
                             <div class="popup-content-event">
                                 <span class="close" onclick="hidePopup('detail3-popup')">&times;</span>
-                                <h2>Workshop di Scrittura Creativa</h2>
-                                <p>Una conferenza che esplora l'impatto dell'intelligenza artificiale nella creazione letteraria e 
-                                    nella lettura. Relatori esperti discuteranno di come l'IA può essere utilizzata per scrivere libri, 
-                                    analizzare testi e migliorare l'esperienza di lettura.</p>
+                                <h2>Conference on Artificial Intelligence in Literature</h2>
+                                <br>
+                                <br>
+                                <p>A conference that explores the impact of artificial intelligence in literary creation and reading. 
+                                    Expert speakers will discuss how AI can be used to write books, analyze texts, and improve the reading experience.</p>
                             </div>
                         </div>
 
                         <div class="info-box-event left">
-                            <h4 class="title">Maratona di Lettura di Classici della Letteratura</h4>
+                            <h4 class="title">Literature Classics Reading Marathon</h4>
                             <br>
-                            <h5>15 agosto 2024</h5><br>
-                            <h5><strong>Orario: </strong>12:00 - 20:00</h5>
+                            <h5>15 August 2024</h5><br>
+                            <h5><strong>Time: </strong>12:00 - 20:00</h5>
                             <br>
                             <br>
-                            <button class="details" onclick="showPopup('detail4-popup')">Dettagli</button>
+                            <button class="details" onclick="showPopup('detail4-popup')">Details</button>
                         </div>
                         <div id="detail4-popup" class="popup">
                             <div class="popup-content-event">
                                 <span class="close" onclick="hidePopup('detail4-popup')">&times;</span>
-                                <h2>Workshop di Scrittura Creativa</h2>
-                                <p>Una giornata intera dedicata alla lettura di brani dai classici della letteratura mondiale. 
-                                    Partecipanti possono leggere i loro passaggi preferiti o semplicemente ascoltare. Saranno 
-                                    inclusi autori come Dante, Shakespeare, e Tolstoj.</p>
+                                <h2>Literature Classics Reading Marathon</h2>
+                                <br>
+                                <br>
+                                <p>A whole day dedicated to reading excerpts from the classics of world literature. Participants can read 
+                                    their favorite passages or just listen. Authors such as Dante, Shakespeare, and Tolstoy will be included.</p>
                             </div>
                         </div>
-
-                        <script src="json/script.js"></script>
                     </div>
                 </section>
             </section>
@@ -157,17 +216,18 @@
 
         <!-- Contatti -->
         <div class="sections">
-            <h2>Per maggiori informazioni contattare:</h2><br>
-            <a href="contacts.html" class="btn-contacts">Servizio di contatti</a>
+            <h2>For further information contact:</h2><br>
+            <a href="contacts.html" class="btn-contacts">contact</a>
         </div>
 
         <!-- Banner extra per arrivare ai libri -->
         <section class="banner">
             <div class="cta">
-                <h3>Vivi nuove avventura, immergendori in mondi nuovi e fatastici</h3>
-                <p>Con noi potrai vagliare ogni tua nuova passione di lettura, dai classici con I Promessi Sposi, Romeo e Giulietta e molti altri;
-                fino a romanzi più modersi come L'attraversa specchi, Harry Potter e molti altri ancora</p>
-                <a href="catalogue.html" class="cta-btn">Esplora</a>
+                <h3>Live new adventures, immersing in new and fairy worlds</h3>
+                <p>With us you can explore your new reading passion, from classics 
+                    like "1984" by Orwell, "The Great Gatsby" and many more; to more 
+                    modern novels like "The Lord of the Rings", "Harry Potter" and many more</p>
+                <a href="catalogue.html" class="cta-btn">Explore</a>
             </div>
         </section>
 
@@ -181,6 +241,9 @@
                 <p>&copy; Copyright 2024</p>
             </div>
         </div>
+
+        <!-- Script di apertura popup -->
+        <script src="json/script.js"></script>
          
     </body>
 </html>
